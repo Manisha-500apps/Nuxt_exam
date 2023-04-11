@@ -70,26 +70,26 @@
                 as="h3"
                 class="text-lg font-medium leading-6 text-gray-900"
               >
-                {{ edit ? "Edit" : "Delete" }}-Project
+                {{ edit ? "Edit" : "Delete" }}-Employee-Details
               </DialogTitle>
 
               <div v-if="edit">
                 <CrudEdit4
-                  :project="editProject"
+                  :empData="operation"
                   @edit="
                     (openModal = false),
                       (edit = false),
                       emit('emitData', {
                         note: $event,
                         value: 'edit',
-                        index: editIndex,
+                        index: editData,
                       })
                   "
                   @cancel="closeModal"
                 />
               </div>
-              <div v-if="deleteProject">
-                <p>do you want to delete?</p>
+              <div v-if="deleteData">
+                <p>do you want to delete ?</p>
                 <div class="mt-10 flex">
                   <button
                     type="submit"
@@ -98,12 +98,12 @@
                         emit('emitData', {
                           note: $event,
                           value: 'delete',
-                          index: editIndex,
+                          index: editData,
                         })
                     "
                     class="block mr-2 rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
-                    yes
+                    Yes
                   </button>
 
                   <button
@@ -111,7 +111,7 @@
                     @click="closeModal"
                     class="block rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
-                    no
+                    No
                   </button>
                 </div>
               </div>
@@ -130,6 +130,11 @@ import {
   Dialog,
 } from "@headlessui/vue";
 import { TrashIcon, PencilSquareIcon } from "@heroicons/vue/24/outline";
+const operation = ref({});
+const editData = ref(-1);
+const edit = ref(false);
+const deleteData = ref(false);
+
 const fields = ref([
   "s_no",
   "name",
@@ -143,10 +148,19 @@ const props = defineProps({
   project: { type: Array, required: true },
 });
 const openModal = ref(false);
-const emitData = (note: any, index: any, value: any) => {
-  openModal.value = true;
-};
 const closeModal = () => {
   openModal.value = false;
+  edit.value = false;
+  deleteData.value = false;
+};
+const emitData = (note: any, index: any, value: any) => {
+  openModal.value = true;
+  editData.value = index;
+  operation.value = JSON.parse(JSON.stringify(note));
+  if (value == "edit") {
+    edit.value = true;
+  } else {
+    deleteData.value = true;
+  }
 };
 </script>
