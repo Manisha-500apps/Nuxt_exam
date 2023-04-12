@@ -1,6 +1,7 @@
 <template>
   <div>
-    <!-- <NuxtWelcome /> -->
-    <CollectionMain />
+    <!-- <CollectionMain /> -->
+    <!-- <InterviewsMain2 /> -->
+    <FloorplansMain3 />
   </div>
 </template>
