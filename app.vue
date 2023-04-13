@@ -1,4 +1,5 @@
 <template>
-  <NuxtPage></NuxtPage>
+  <!-- <NuxtPage></NuxtPage> -->
+  <AppAddHome />
 </template>
 <script setup lang="ts"></script>
