@@ -89,6 +89,7 @@
     </div>
   </div>
   <AppCard1></AppCard1>
+  <AppImage />
   <AppCardsView1 />
   <AppSetView1 />
 </template>

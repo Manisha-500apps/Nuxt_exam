@@ -3,19 +3,17 @@
     <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
       Why Choose 500apps?
     </h2>
-    <p class="mt-2 text-lg leading-8 text-gray-600">
+    <p class="mt-9 text-lg leading-8 text-gray-600">
       Our Infinity Suite of 50 apps covers all aspects of business operations
     </p>
-    <br /><br />
     <div class="display-4 text-center">
       <button
         type="button"
-        class="bg-indigo-600 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg"
+        class="bg-indigo-600 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg mt-11"
       >
         Know More
       </button>
     </div>
-    <br /><br />
 
     <dl
       class="mt-5 grid grid-cols-1 divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow md:grid-cols-4 md:divide-x md:divide-y-0 ml-[45px] mr-11"

@@ -69,9 +69,9 @@ import { XMarkIcon } from "@heroicons/vue/20/solid";
 const tabs = [
   { name: "Features", href: "#", current: false },
   { name: "Pricing", href: "#", current: false },
-  { name: "Company", href: "#", current: true },
+  { name: "Company", href: "#", current: false },
   { name: "Contact Sales", href: "#", current: false },
-  { name: "Login", href: "#", current: false },
-  { name: "SignUp", href: "#", current: false },
+  { name: "Login", href: "#", current: true },
+  { name: "SignUp", href: "#", current: true },
 ];
 </script>
