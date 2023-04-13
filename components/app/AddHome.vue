@@ -92,10 +92,6 @@
   <AppCardsView />
   <AppSetView />
 
-  <div><FeaturesTemplate6></FeaturesTemplate6></div>
-  <div><FeaturesTemplate4></FeaturesTemplate4></div>
-  <FeaturesTemplate5></FeaturesTemplate5>
-  <FeaturesTemplate3></FeaturesTemplate3>
 </template>
 
 <script setup>
